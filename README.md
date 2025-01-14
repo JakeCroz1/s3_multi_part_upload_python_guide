@@ -7,7 +7,7 @@ This README provides an overview of how the client-side and backend work togethe
 Amazon S3's multipart upload allows large files to be uploaded in smaller parts, improving reliability and performance. This implementation divides responsibilities between the client-side and the backend:
 
 - **Client-Side**: Handles file splitting, part uploads, and progress tracking.
-- **Backend**: Interacts with AWS S3 to initiate uploads, generate presigned URLs, track parts, and finalize uploads.
+- **Backend**: FastAPI interacts with AWS S3 to initiate uploads, generate presigned URLs, track parts, and finalize uploads.
 
 ---
 
