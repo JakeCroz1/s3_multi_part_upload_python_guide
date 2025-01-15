@@ -3,6 +3,8 @@ import boto3
 import os
 from pydantic import BaseModel
 from mangum import Mangum
+
+#Allow Swagger UI
 app = FastAPI(docs_url="/api/docs",)
 # AWS Lambda handler
 handler = Mangum(app)
