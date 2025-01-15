@@ -3,20 +3,11 @@ import boto3
 import os
 from pydantic import BaseModel
 from mangum import Mangum
-from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(docs_url="/api/docs",)
 # AWS Lambda handler
-# Configure CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Replace "*" with specific origins for better security
-    allow_credentials=False,
-    allow_methods=["*"],  # Allows all HTTP methods
-    allow_headers=["*"],  # Allows all headers, including 'Content-Type'
-)
 handler = Mangum(app)
 # AWS Configuration
-S3_BUCKET = "<S3BucketName>"
+S3_BUCKET = "<S3BucketName>" #Replace with your S3 Bucket's name
 s3_client = boto3.client('s3')
 
 class StartUploadRequest(BaseModel):
