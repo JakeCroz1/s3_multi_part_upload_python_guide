@@ -209,6 +209,7 @@ Its main responsibilities include:
     
     - Download Git Bash to your personal computer if you do not have it yet.
     - Open Git Bash.
+    - cd to where you saved or cloned this repository.
     - Given that you cloned this repository, run the following Git Bash prompt:
 
         ```
